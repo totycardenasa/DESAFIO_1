@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-int** funcion_1(unsigned int n);
+int** crear_matrices(unsigned int n);
 int* ingresar_numeros();
 
 

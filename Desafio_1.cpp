@@ -11,6 +11,7 @@ int** crear_matrices(unsigned int n) {
             arreglo[i] = new int[n];
         }
 
+
     for (int i = 0; i < n; i=i+1) {
         for (int j = 0; j < n; j=j+1) {
             if (i==n/2 && j==n/2){
