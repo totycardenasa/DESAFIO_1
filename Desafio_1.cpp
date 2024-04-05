@@ -103,6 +103,32 @@ int* ingresar_numeros(){
 }
 
 
+bool comprobador(int* matriz_1,int* matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion){
+    bool variable=false;
+    if(condicion==1){
+        if((matriz_1[fila1][columna1])>matriz_2[fila2][columna2]){
+            variable= true;
+        }
+
+    }
+    else if(condicion==-1){
+        if((matriz_1[fila1][columna1])<matriz_2[fila2][columna2]){
+            variable= true;
+        }
+
+    }
+    else if(condicion==0){
+        if((matriz_1[fila1][columna1])==matriz_2[fila2][columna2]){
+            variable= true;
+        }
+
+    }
+    return variable;
+
+
+}
+
+
 
 
 
