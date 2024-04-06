@@ -6,7 +6,7 @@ using namespace std;
 
 int** crear_matrices(unsigned int n);
 int* ingresar_numeros();
-bool comprobador(int* matriz_1,int* matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion){
+bool comprobador(int** matriz_1,int** matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion);
 
 
 

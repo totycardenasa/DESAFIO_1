@@ -4,7 +4,7 @@ using namespace std;
 #include <Desafio_1.h>
 
 
-int** crear_matrices(unsigned int n) {
+int** crear_matrices(unsigned int n){
         int** arreglo = new int*[n];
         int variable=0;
         for (unsigned int i = 0; i < n; i=i+1) {
@@ -103,7 +103,7 @@ int* ingresar_numeros(){
 }
 
 
-bool comprobador(int* matriz_1,int* matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion){
+bool comprobador(int** matriz_1,int** matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion){
     bool variable=false;
     if(condicion==1){
         if((matriz_1[fila1][columna1])>matriz_2[fila2][columna2]){
@@ -124,7 +124,6 @@ bool comprobador(int* matriz_1,int* matriz_2,int fila1,int fila2, int columna1,i
 
     }
     return variable;
-
 
 }
 
