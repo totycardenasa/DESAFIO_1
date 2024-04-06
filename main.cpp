@@ -1,5 +1,6 @@
-#include <Desafio_1.h>
 
+#include "Desafio_1.h"
+#include "Parcial_1.h"
 #include <iostream>
 using namespace std;
 
