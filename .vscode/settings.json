@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.focusAfterRun": "terminal",
+    "code-runner.runInTerminal": true,
+    "C_Cpp.errorSquiggles": "disabled"
+}

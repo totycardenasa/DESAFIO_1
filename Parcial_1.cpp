@@ -11,7 +11,7 @@ int** matriz_neutra(int n){
         neutra[i] = new int[n]; //Memoria dinámica para cada fila.
     }
         
-    int centro = n/2; //coordenada centro 0.
+    int centro = n/2; //Coordenada centro 0.
     int elemento = 1; //Empieza a contar de 1 hasta (n*n)-1.
     
     for (int i = 0; i < n; i++) { 
@@ -27,7 +27,7 @@ int** matriz_neutra(int n){
     return neutra; //Devolver la matriz que se creó.
 }
 
-void liberar_mem_neutra(int**matriz,int n){  //Liberar el espacio de memoria de la anterior matriz.
+void liberar_mem_neutra(int**matriz,int n){ //Liberar el espacio de memoria de la anterior matriz.
     
     for (int i= 0; i<n;++i){
         delete[]matriz[i];
