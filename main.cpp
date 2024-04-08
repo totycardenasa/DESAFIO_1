@@ -107,7 +107,7 @@ int main (){
             cantidad_condiciones=cantidad_condiciones-1;
             condiciones=condiciones+1;
         }
-        cout << "Con esta clave "K" : (";
+        cout << "Con esta clave 'K' : (";
         for(int i = 0; i < Tamanio_K-1; i=i+1) {
             cout << llamado[i] << ", ";
         }
@@ -115,7 +115,7 @@ int main (){
         for(int i = 0; i < cantidad_de_ArrdeX-1; i=i+1) {
             cout << arreglo_X[i] << ", ";
         }
-        cout << arreglo_X[cantidad_de_ArrdeX-1] << ")" << endl << "La cerradura "X" tiene las siguientes rotaciones:" << endl <<"R(";;
+        cout << arreglo_X[cantidad_de_ArrdeX-1] << ")" << endl << "La cerradura 'X' tiene las siguientes rotaciones:" << endl <<"R(";;
         for(int i = 0; i < cantidad_de_ArrdeX-1; i=i+1) {
             cout << arreglo_rotaciones[i] << ", ";
         }
