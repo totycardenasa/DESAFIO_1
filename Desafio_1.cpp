@@ -1,13 +1,13 @@
+#include "Desafio_1.h"
 #include <iostream>
 using namespace std;
 
-#include <Desafio_1.h>
 
 
-int** crear_matrices(unsigned int n){
+int** crear_matrices( int n){
         int** arreglo = new int*[n];
-        int variable=0;
-        for (unsigned int i = 0; i < n; i=i+1) {
+        int variable=1;
+        for ( int i = 0; i < n; i=i+1) {
             arreglo[i] = new int[n];
         }
 
@@ -27,12 +27,7 @@ int** crear_matrices(unsigned int n){
     }
 
 
-    for (int i = 0; i < n; i=i+1) {
-        for (int j = 0; j < n; j=j+1) {
-            cout << arreglo[i][j]<< " ";
-        }
-        cout << endl;
-    }
+
 
     return arreglo;
 
@@ -49,9 +44,21 @@ int* ingresar_numeros(){
     int fila;
     int columna;
     int* arreglo_K;
+    bool bandera=true;
+
+    while (bandera) {
     cout<<"Ingrese dos numeros (filas - columnas)."<<endl;
     cin>>fila;
     cin>>columna;
+    if (cin.fail()) {
+        cout << "Error, ingrese un numero valido." << endl;
+        cin.clear(); // Limpiamos el estado de cin para restaurarlo
+        while (cin.get() != '\n'); // Descartamos la entrada inválida del buffer de entrada
+    } else {
+        // Si la entrada es válida, salimos del bucle
+        bandera = false;
+    }
+    }
 
     while(fila<1 || columna <1){
         cout<<"ERROR"<<endl;
@@ -103,7 +110,7 @@ int* ingresar_numeros(){
 }
 
 
-bool comprobador(int** matriz_1,int** matriz_2,int fila1,int fila2, int columna1,int columna2,int condicion){
+bool comprobador(int** matriz_1,int** matriz_2, int fila1, int columna1, int fila2, int columna2,int condicion){
     bool variable=false;
     if(condicion==1){
         if((matriz_1[fila1][columna1])>matriz_2[fila2][columna2]){
@@ -130,6 +137,17 @@ bool comprobador(int** matriz_1,int** matriz_2,int fila1,int fila2, int columna1
 
 
 
+void cambiar_matriz(int**& matriz1,int** matriz2, unsigned int dimension){
+    matriz1 = new int*[dimension];
+    for(unsigned int i = 0; i< dimension; i++){
+        matriz1[i] = new int[dimension];
+    }
+    for(unsigned int i = 0; i< dimension; i++){
+        for(unsigned int j = 0; j< dimension; j++){
+            matriz1[i][j] = matriz2[i][j];
+        }
+    }
 
+}
 
 

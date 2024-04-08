@@ -5,11 +5,10 @@
 #include <iostream>
 using namespace std;
 
-int** matriz_neutra(int n);
 void liberar_mem_neutra(int**matriz,int n);
 void transponer(int**matriz, int n);
 void invertir_filas(int**matriz,int n);
-void rotar_noventa(int n, int rotaciones);
+void rotar_noventa(int** matriz, int n);
 
 
 #endif // PARCIAL_1_H
